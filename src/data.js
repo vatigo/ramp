@@ -14,7 +14,7 @@ function chillHop() {
     {
       name: "Saudade",
       cover:
-        "https://chillhop.com/wp-content/uploads/2021/09/a2d710149876c8e0c9fb097840b2438fbc21bd37-1024x1024.jpg",
+        "https://chillhop.com/wp-content/uploads/2021/07/4163ebb931e06d4ee8eb184295c0246d4a5055f7-1024x1024.jpg",
       artist: "Juan Rios",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=21650",
       color: ["#FF8C71", "#481736"],
