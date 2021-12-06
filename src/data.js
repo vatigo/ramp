@@ -12,6 +12,16 @@ function chillHop() {
       active: true,
     },
     {
+      name: "Saudade",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2021/09/a2d710149876c8e0c9fb097840b2438fbc21bd37-1024x1024.jpg",
+      artist: "Juan Rios",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=21650",
+      color: ["#FF8C71", "#481736"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "Beaver Creek",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
