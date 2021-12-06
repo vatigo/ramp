@@ -1,0 +1,82 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 30px rgb(23, 23, 23);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10;
+
+  h2 {
+    padding: 2rem;
+  }
+
+  .library-item-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    padding: 1rem 2rem 1rem 2rem;
+    img {
+      width: 30%;
+      border-radius: 10%;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: rgba(173, 225, 255, 0.5);
+      }
+    }
+  }
+
+  .song-description {
+    padding-left: 1rem;
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+.selected {
+  background: rgba(206, 205, 135, 0.5);
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}

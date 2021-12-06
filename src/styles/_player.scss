@@ -1,0 +1,124 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 1;
+  transition: 0.5s ease all;
+}
+
+.time-control {
+  width: 50%;
+  display: flex;
+
+  input {
+    width: 100%;
+    /*padding: 1rem 0rem;*/
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  p {
+    padding: 1rem;
+    width: 4.4rem;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.play-control {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transition: 0.5s ease all;
+
+  height: 5em;
+
+  svg {
+    cursor: pointer;
+    flex: 1;
+    transition: 0.5s ease all;
+  }
+}
+
+.time-control input[type="range"]:focus {
+  outline: none;
+}
+
+.time-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border: none;
+  background: transparent;
+}
+
+.time-control input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border: none;
+  background: transparent;
+}
+
+.track {
+  background: lightblue;
+  position: relative;
+  margin: auto;
+  height: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.animate-track {
+  background: rgb(204, 204, 204);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.volume-active .fa-play,
+.volume-active .fa-pause,
+.volume-active .fa-fast-backward,
+.volume-active .fa-fast-forward {
+  width: 0;
+  flex: none;
+}
+
+.play-control input {
+  margin-left: 1rem;
+}
+
+.volume-active .play-control {
+  justify-content: space-around;
+  width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .library-active .player {
+    opacity: 0;
+  }
+
+  .time-control {
+    width: 90%;
+  }
+
+  .play-control {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .play-control {
+    width: 80%;
+  }
+}

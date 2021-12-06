@@ -1,0 +1,80 @@
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: 0.5s ease all;
+  position: relative;
+
+  .album {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  img.cover {
+    border-radius: 0;
+    width: calc(max(20%, 20vh));
+    position: static;
+    z-index: 5;
+    transition: 0.5s ease all;
+  }
+
+  .record {
+    position: absolute;
+    left: 50%;
+    width: calc(max(19%, 19vh));
+    transition: 0.5s ease all;
+    transform: translateX(-50%);
+    top: 2%;
+  }
+
+  .playing {
+    transform: translateX(-25%);
+  }
+
+  .cover.playing {
+    transform: translateX(-25%);
+    transition: 0.5s ease all;
+  }
+
+  .record img {
+    border-radius: 50%;
+    width: 100%;
+    animation: rotating 20s linear infinite;
+    animation-play-state: paused;
+  }
+
+  h2 {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotating 20s linear infinite;
+  animation-play-state: running !important;
+}
+
+@media screen and (max-width: 768px) {
+  .library-active .song-container {
+    opacity: 0;
+  }
+  .song-container img {
+    width: 60%;
+  }
+}
